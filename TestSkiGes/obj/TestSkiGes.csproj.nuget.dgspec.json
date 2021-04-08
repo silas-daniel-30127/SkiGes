@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\AN 3 - SEM 2\\II\\SkiGes\\SkiGes.csproj": {}
+    "D:\\AN 3 - SEM 2\\II\\SkiGes\\TestSkiGes\\TestSkiGes.csproj": {}
   },
   "projects": {
-    "D:\\AN 3 - SEM 2\\II\\SkiGes\\SkiGes.csproj": {
+    "D:\\AN 3 - SEM 2\\II\\SkiGes\\TestSkiGes\\TestSkiGes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\AN 3 - SEM 2\\II\\SkiGes\\SkiGes.csproj",
-        "projectName": "SkiGes",
-        "projectPath": "D:\\AN 3 - SEM 2\\II\\SkiGes\\SkiGes.csproj",
+        "projectUniqueName": "D:\\AN 3 - SEM 2\\II\\SkiGes\\TestSkiGes\\TestSkiGes.csproj",
+        "projectName": "TestSkiGes",
+        "projectPath": "D:\\AN 3 - SEM 2\\II\\SkiGes\\TestSkiGes\\TestSkiGes.csproj",
         "packagesPath": "C:\\Users\\40749\\.nuget\\packages\\",
-        "outputPath": "D:\\AN 3 - SEM 2\\II\\SkiGes\\obj\\",
+        "outputPath": "D:\\AN 3 - SEM 2\\II\\SkiGes\\TestSkiGes\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -43,6 +43,24 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.7.1, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[1.3.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -54,9 +72,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

@@ -78,3 +78,43 @@ C:\Users\Daniel\Desktop\UTCN\II\Proiect II\SkiGes\obj\Debug\net5.0\ref\SkiGes.dl
 C:\Users\Daniel\Desktop\UTCN\II\Proiect II\SkiGes\obj\Debug\net5.0\SkiGes.pdb
 C:\Users\Daniel\Desktop\UTCN\II\Proiect II\SkiGes\obj\Debug\net5.0\SkiGes.genruntimeconfig.cache
 C:\Users\Daniel\Desktop\UTCN\II\Proiect II\SkiGes\obj\Debug\net5.0\SkiGes.csproj.CopyComplete
+D:\AN 3 - SEM 2\II\SkiGes\bin\Debug\net5.0\appsettings.Development.json
+D:\AN 3 - SEM 2\II\SkiGes\bin\Debug\net5.0\appsettings.json
+D:\AN 3 - SEM 2\II\SkiGes\bin\Debug\net5.0\SkiGes.exe
+D:\AN 3 - SEM 2\II\SkiGes\bin\Debug\net5.0\SkiGes.deps.json
+D:\AN 3 - SEM 2\II\SkiGes\bin\Debug\net5.0\SkiGes.runtimeconfig.json
+D:\AN 3 - SEM 2\II\SkiGes\bin\Debug\net5.0\SkiGes.runtimeconfig.dev.json
+D:\AN 3 - SEM 2\II\SkiGes\bin\Debug\net5.0\SkiGes.dll
+D:\AN 3 - SEM 2\II\SkiGes\bin\Debug\net5.0\ref\SkiGes.dll
+D:\AN 3 - SEM 2\II\SkiGes\bin\Debug\net5.0\SkiGes.pdb
+D:\AN 3 - SEM 2\II\SkiGes\bin\Debug\net5.0\SkiGes.Views.dll
+D:\AN 3 - SEM 2\II\SkiGes\bin\Debug\net5.0\SkiGes.Views.pdb
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\SkiGes.csprojAssemblyReference.cache
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\SkiGes.GeneratedMSBuildEditorConfig.editorconfig
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\SkiGes.AssemblyInfoInputs.cache
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\SkiGes.AssemblyInfo.cs
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\SkiGes.csproj.CoreCompileInputs.cache
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\SkiGes.MvcApplicationPartsAssemblyInfo.cache
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\SkiGes.RazorAssemblyInfo.cache
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\SkiGes.RazorAssemblyInfo.cs
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\staticwebassets\SkiGes.StaticWebAssets.Manifest.cache
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\staticwebassets\SkiGes.StaticWebAssets.xml
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\scopedcss\bundle\SkiGes.styles.css
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\SkiGes.TagHelpers.input.cache
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\SkiGes.TagHelpers.output.cache
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\SkiGes.RazorCoreGenerate.cache
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\SkiGes.RazorTargetAssemblyInfo.cache
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\SkiGes.RazorTargetAssemblyInfo.cs
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\SkiGes.Views.pdb
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\SkiGes.dll
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\ref\SkiGes.dll
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\SkiGes.pdb
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\SkiGes.genruntimeconfig.cache
+D:\AN 3 - SEM 2\II\SkiGes\obj\Debug\net5.0\SkiGes.csproj.CopyComplete
