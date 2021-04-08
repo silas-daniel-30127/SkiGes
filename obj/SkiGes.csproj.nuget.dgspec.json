@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Daniel\\Desktop\\UTCN\\II\\Proiect II\\SkiGes\\SkiGes.csproj": {}
+    "C:\\Users\\Daniel\\Desktop\\UTCN\\II\\Proiect II\\Clona - SkiGes\\SkiGes\\SkiGes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Daniel\\Desktop\\UTCN\\II\\Proiect II\\SkiGes\\SkiGes.csproj": {
+    "C:\\Users\\Daniel\\Desktop\\UTCN\\II\\Proiect II\\Clona - SkiGes\\SkiGes\\SkiGes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Daniel\\Desktop\\UTCN\\II\\Proiect II\\SkiGes\\SkiGes.csproj",
+        "projectUniqueName": "C:\\Users\\Daniel\\Desktop\\UTCN\\II\\Proiect II\\Clona - SkiGes\\SkiGes\\SkiGes.csproj",
         "projectName": "SkiGes",
-        "projectPath": "C:\\Users\\Daniel\\Desktop\\UTCN\\II\\Proiect II\\SkiGes\\SkiGes.csproj",
+        "projectPath": "C:\\Users\\Daniel\\Desktop\\UTCN\\II\\Proiect II\\Clona - SkiGes\\SkiGes\\SkiGes.csproj",
         "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Daniel\\Desktop\\UTCN\\II\\Proiect II\\SkiGes\\obj\\",
+        "outputPath": "C:\\Users\\Daniel\\Desktop\\UTCN\\II\\Proiect II\\Clona - SkiGes\\SkiGes\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
