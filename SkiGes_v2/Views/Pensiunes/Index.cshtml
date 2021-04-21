@@ -1,0 +1,75 @@
+﻿@model IEnumerable<SkiGes_v2.Models.Pensiune>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Adresa.oras)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Partie.nume)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nume)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.camere)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.latitudine)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.logitudine)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adresa.oras)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Partie.nume)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nume)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.camere)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.latitudine)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.logitudine)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idPensiune }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idPensiune }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idPensiune })
+        </td>
+    </tr>
+}
+
+</table>

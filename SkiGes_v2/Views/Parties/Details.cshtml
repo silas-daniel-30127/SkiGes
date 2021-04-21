@@ -1,0 +1,82 @@
+﻿@model SkiGes_v2.Models.Partie
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Partie</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nume)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nume)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.orar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.orar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.link)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.link)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.latitudine)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.latitudine)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.longitudine)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.longitudine)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.stare_partie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stare_partie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dificultate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dificultate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.strat_zapada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.strat_zapada)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idPartie }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
