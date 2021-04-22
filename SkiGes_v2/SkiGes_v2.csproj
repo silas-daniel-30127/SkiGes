@@ -151,8 +151,10 @@
     </Compile>
     <Compile Include="Models\Adresa.cs" />
     <Compile Include="Models\Model1.cs" />
+    <Compile Include="Models\Model2.cs" />
     <Compile Include="Models\Partie.cs" />
     <Compile Include="Models\Pensiune.cs" />
+    <Compile Include="Models\sysdiagrams.cs" />
     <Compile Include="Models\Utilizator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
