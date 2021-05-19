@@ -25,5 +25,11 @@ namespace SkiGes_v1._0.Models
 
         [StringLength(50)]
         public string telefon { get; set; }
+
+        [StringLength(50)]
+        public string type { get; set; }
+
+        [StringLength(50)]
+        public string password { get; set; }
     }
 }

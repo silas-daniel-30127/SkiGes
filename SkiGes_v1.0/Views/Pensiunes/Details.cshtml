@@ -1,0 +1,82 @@
+﻿@model SkiGes_v1._0.Models.Pensiune
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pensiune</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Adresa.oras)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adresa.oras)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Partie.nume)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Partie.nume)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nume)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nume)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.camere)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.camere)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.latitudine)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.latitudine)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.logitudine)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.logitudine)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idPensiune }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

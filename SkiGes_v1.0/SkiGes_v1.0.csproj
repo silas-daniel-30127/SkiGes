@@ -128,7 +128,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdresasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\PartiesController.cs" />
+    <Compile Include="Controllers\PensiunesController.cs" />
     <Compile Include="Controllers\UtilizatorsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -181,6 +185,23 @@
     <Content Include="Views\Utilizators\Details.cshtml" />
     <Content Include="Views\Utilizators\Edit.cshtml" />
     <Content Include="Views\Utilizators\Index.cshtml" />
+    <Content Include="Views\Adresas\Create.cshtml" />
+    <Content Include="Views\Adresas\Delete.cshtml" />
+    <Content Include="Views\Adresas\Details.cshtml" />
+    <Content Include="Views\Adresas\Edit.cshtml" />
+    <Content Include="Views\Adresas\Index.cshtml" />
+    <Content Include="Views\Parties\Create.cshtml" />
+    <Content Include="Views\Parties\Delete.cshtml" />
+    <Content Include="Views\Parties\Details.cshtml" />
+    <Content Include="Views\Parties\Edit.cshtml" />
+    <Content Include="Views\Parties\Index.cshtml" />
+    <Content Include="Views\Pensiunes\Create.cshtml" />
+    <Content Include="Views\Pensiunes\Delete.cshtml" />
+    <Content Include="Views\Pensiunes\Details.cshtml" />
+    <Content Include="Views\Pensiunes\Edit.cshtml" />
+    <Content Include="Views\Pensiunes\Index.cshtml" />
+    <Content Include="Views\Login\View.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
