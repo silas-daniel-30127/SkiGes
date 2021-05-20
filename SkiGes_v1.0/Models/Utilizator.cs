@@ -25,5 +25,9 @@ namespace SkiGes_v1._0.Models
 
         [StringLength(50)]
         public string telefon { get; set; }
+        [Required(ErrorMessage = "Password is reqired")]
+        [Display(Name = "Password")]
+        [DataType(DataType.Password)]
+        public string password { get; set; } 
     }
 }

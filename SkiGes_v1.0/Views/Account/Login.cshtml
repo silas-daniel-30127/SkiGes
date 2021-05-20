@@ -1,0 +1,48 @@
+﻿@model SkiGes_v1._0.Models.Utilizator
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm("Login", "Account", FormMethod.Post))
+{
+    <fieldset>
+        <legend>Mvc Simple Login Application Demo</legend>
+
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        @if (@ViewBag.Message != null)
+        {
+            <div style="border: 1px solid red">
+                @ViewBag.Message
+            </div>
+        }
+        <table>
+            <tr>
+                <td>@Html.LabelFor(a => a.nume)</td>
+                <td>@Html.TextBoxFor(a => a.nume)</td>
+                <td>@Html.ValidationMessageFor(a => a.nume)</td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(a => a.password)
+                </td>
+                <td>
+                    @Html.PasswordFor(a => a.password)
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(a => a.password)
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Login" />
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </fieldset>
+}

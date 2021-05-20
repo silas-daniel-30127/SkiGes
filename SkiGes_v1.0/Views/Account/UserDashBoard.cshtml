@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "UserDashBoard";
+}
+
+<h2>UserDashBoard</h2>
+
+<fieldset>
+    <legend> User DashBoard </legend>
+
+@if (Session["nume"] != null) {
+    <text> Welcome @Session["nume"].ToString() </text>
+    } 
+</fieldset> 
+
+<div>
+    <a href="@Url.Action("Logout", "Account")">Log out</a>
+</div>
