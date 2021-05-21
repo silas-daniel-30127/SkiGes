@@ -28,6 +28,7 @@ namespace SkiGes_v1._0.Models
         [Required(ErrorMessage = "Password is reqired")]
         [Display(Name = "Password")]
         [DataType(DataType.Password)]
-        public string password { get; set; } 
+        public string password { get; set; }
+        public string type { get; set; }
     }
 }

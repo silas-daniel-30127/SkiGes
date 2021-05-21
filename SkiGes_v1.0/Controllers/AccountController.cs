@@ -10,6 +10,7 @@ namespace SkiGes_v1._0.Controllers
     public class AccountController : Controller
     {
         private Model1 model1 = new Model1();
+        private string userType;
         // GET: Account
         public ActionResult Register()
         {
@@ -19,6 +20,7 @@ namespace SkiGes_v1._0.Controllers
         [HttpPost]
         public ActionResult Register(Utilizator ut)
         {
+            ut.type = "USER";
             model1.Utilizator.Add(ut); 
             return View();
         }
@@ -32,7 +34,8 @@ namespace SkiGes_v1._0.Controllers
                 if (obj != null)
                 {
                     Session["UserID"] = obj.idUtilizator.ToString();
-                    Session["nume"] = obj.nume.ToString();
+                    Session["UserName"] = obj.nume.ToString();
+                    Session["UserType"] = obj.type.ToString();
                     return RedirectToAction("UserDashBoard");
                 }
             }
@@ -41,7 +44,7 @@ namespace SkiGes_v1._0.Controllers
         }
         public ActionResult UserDashBoard()
         {
-            if (Session["UserID"] != null)
+            if (Session["UserName"] != null)
             {
                 return View();
             }

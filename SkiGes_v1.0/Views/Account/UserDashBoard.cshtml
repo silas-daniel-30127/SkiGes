@@ -1,6 +1,10 @@
 ﻿
 @{
     ViewBag.Title = "UserDashBoard";
+    if (Session["UserType"] == null)
+    {
+        Response.Redirect("~/Account/Login");
+    }
 }
 
 <h2>UserDashBoard</h2>
@@ -8,10 +12,11 @@
 <fieldset>
     <legend> User DashBoard </legend>
 
-@if (Session["nume"] != null) {
-    <text> Welcome @Session["nume"].ToString() </text>
-    } 
-</fieldset> 
+    @if (Session["nume"] != null)
+    {
+        <text> Welcome @Session["nume"].ToString() </text>
+    }
+</fieldset>
 
 <div>
     <a href="@Url.Action("Logout", "Account")">Log out</a>
