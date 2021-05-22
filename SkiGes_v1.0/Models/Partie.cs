@@ -27,9 +27,9 @@ namespace SkiGes_v1._0.Models
         [StringLength(50)]
         public string link { get; set; }
 
-        public float? latitudine { get; set; }
+        public double latitudine { get; set; }
 
-        public float? longitudine { get; set; }
+        public double longitudine { get; set; }
 
         [StringLength(50)]
         public string stare_partie { get; set; }
