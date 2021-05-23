@@ -27,10 +27,6 @@ namespace SkiGes_v1._0.Controllers
 
             return View();
         }
-        public ActionResult findMyLocation() {
 
-            Session["MyIP"] = "192.168.0.1";
-            return View();
-        } 
     }
 }

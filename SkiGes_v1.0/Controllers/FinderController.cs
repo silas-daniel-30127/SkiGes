@@ -20,6 +20,8 @@ namespace SkiGes_v1._0.Controllers
             return View();
         }
 
+
+
         private string readFromUrl(string ip)
         {
             ip = ip.Remove(ip.Length - 1); 

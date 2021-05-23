@@ -1,4 +1,5 @@
-﻿
+﻿@model IEnumerable<SkiGes_v1._0.Models.Partie>
+
 @{
     ViewBag.Title = "UserDashBoard";
     if (Session["UserType"] == null)
@@ -6,17 +7,66 @@
         Response.Redirect("~/Account/Login");
     }
 }
-
-<h2>UserDashBoard</h2>
-
 <fieldset>
-    <legend> User DashBoard </legend>
-
-    @if (Session["nume"] != null)
-    {
-        <text> Welcome @Session["nume"].ToString() </text>
-    }
+    <div>
+        @if (Session["UserName"] != null)
+        {
+            <h1> Welcome @Session["UserName"].ToString() ! </h1>
+        }
+    </div>
 </fieldset>
+<h1>Lista partiilor apropriate</h1>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nume)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.orar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.link)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.stare_partie)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dificultate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.strat_zapada)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.nume)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.orar)
+    </td>
+    <td>
+        <a href="@Html.DisplayFor(modelItem => item.link)">@Html.DisplayFor(modelItem => item.link)</a> 
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.stare_partie)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.dificultate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.strat_zapada)
+    </td>
+    <td>
+        @Html.ActionLink("Details", "Details", new { id = item.idPartie })
+    </td>
+</tr>
+    }
+
+</table>
 
 <div>
     <a href="@Url.Action("Logout", "Account")">Log out</a>

@@ -133,6 +133,8 @@
     <Compile Include="Controllers\AdresasController.cs" />
     <Compile Include="Controllers\FinderController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PartiesController.cs" />
+    <Compile Include="Controllers\PensiunesController.cs" />
     <Compile Include="Controllers\UtilizatorsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -194,11 +196,22 @@
     <Content Include="Views\Adresas\Details.cshtml" />
     <Content Include="Views\Adresas\Edit.cshtml" />
     <Content Include="Views\Adresas\Index.cshtml" />
-    <Content Include="Views\Home\currentLocation.cshtml" />
     <Content Include="Views\Finder\NearestParty.cshtml" />
+    <Content Include="Views\Parties\Create.cshtml" />
+    <Content Include="Views\Parties\Delete.cshtml" />
+    <Content Include="Views\Parties\Details.cshtml" />
+    <Content Include="Views\Parties\Edit.cshtml" />
+    <Content Include="Views\Parties\Index.cshtml" />
+    <Content Include="Views\Pensiunes\Create.cshtml" />
+    <Content Include="Views\Pensiunes\Delete.cshtml" />
+    <Content Include="Views\Pensiunes\Details.cshtml" />
+    <Content Include="Views\Pensiunes\Edit.cshtml" />
+    <Content Include="Views\Pensiunes\Index.cshtml" />
+    <Content Include="Views\Account\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

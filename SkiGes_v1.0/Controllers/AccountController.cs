@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -10,9 +11,9 @@ namespace SkiGes_v1._0.Controllers
     public class AccountController : Controller
     {
         private Model1 model1 = new Model1();
-        private string userType;
+
         // GET: Account
-        public ActionResult Register()
+         public ActionResult Register()
         {
             return View();
         }
@@ -44,14 +45,24 @@ namespace SkiGes_v1._0.Controllers
         }
         public ActionResult UserDashBoard()
         {
-            if (Session["UserName"] != null)
+            FinderController finder = new FinderController();
+            List<Partie> res = finder.findAllPartiesInZone(100);
+                return View(res);    
+        }
+
+        // GET: Parties/Details/5
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
             {
-                return View();
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            else
+            Partie partie = model1.Partie.Find(id);
+            if (partie == null)
             {
-                return RedirectToAction("Login");
+                return HttpNotFound();
             }
+            return View(partie);
         }
 
 
@@ -59,6 +70,15 @@ namespace SkiGes_v1._0.Controllers
         {
             Session.Abandon();
             return RedirectToAction("Login");
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                model1.Dispose();
+            }
+            base.Dispose(disposing);
         }
     }
 }
