@@ -12,6 +12,7 @@ namespace SkiGes_v1._0.Models
         [Key]
         public int idUtilizator { get; set; }
 
+        [Display(Name = "Username/Email")]
         [StringLength(50)]
         public string nume { get; set; }
 

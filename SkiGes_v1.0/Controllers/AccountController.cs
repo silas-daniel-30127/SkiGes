@@ -43,8 +43,15 @@ namespace SkiGes_v1._0.Controllers
 
             return View();
         }
+
         public ActionResult UserDashBoard()
         {
+            return View();
+        }
+
+            public ActionResult PartiesInZone()
+        {
+           // return View() // pagina cu search si butoane
             FinderController finder = new FinderController();
             List<Partie> res = finder.findAllPartiesInZone(100);
                 return View(res);    
