@@ -7,7 +7,7 @@
     }
 }
 <h1>Lista partiilor apropriate</h1>
-<table class="table">
+<table class="table table-hover table-bordered">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.nume)
@@ -34,7 +34,8 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.nume)
+                @Html.ActionLink(@Html.DisplayFor(modelItem => item.nume).ToHtmlString(), "Details", new { id = item.idPartie }, new { @style = "color:#0041aa;" })
+                @*<a href="@Html.DisplayFor(modelItem => item.link)">@Html.DisplayFor(modelItem => item.nume)</a> *@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.orar)

@@ -30,6 +30,7 @@ namespace SkiGes_v1._0.Controllers
                 model1.Utilizator.Add(ut);
                 model1.SaveChanges();
                 Session["NewUser"] = ut.nume;
+                
             }
             catch (Exception)
             {
@@ -62,11 +63,12 @@ namespace SkiGes_v1._0.Controllers
             return View();
         }
 
-            public ActionResult PartiesInZone()
+            public ActionResult PartiesInZone(float range)
         {
-           // return View() // pagina cu search si butoane
+            // return View() // pagina cu search si butoane
+
             FinderController finder = new FinderController();
-            List<Partie> res = finder.findAllPartiesInZone(100);
+            List<Partie> res = finder.findAllPartiesInZone(range);
                 return View(res);    
         }
 

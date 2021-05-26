@@ -2,28 +2,27 @@
 
 @{
     ViewBag.Title = "User DashBoard";
+    ViewBag.Range = 100;
     if (Session["UserType"] == null)
     {
         Response.Redirect("~/Account/Login");
     }
 }
 <html>
-<body text-align="center">
-    <fieldset>
-        <div>
+
+<body>
+
+    
+    <div class="jumbotron">
             @if (Session["UserName"] != null)
             {
-                <h3> Welcome @Session["UserName"].ToString() ! </h3>
+                <h1>Welcome @Session["UserName"].ToString() ! </h1>
             }
-        </div>
-    </fieldset>
+        <p class="lead">Choose your range preferencies: 
+        <input type="text" id="range" name="range" value=""/></p>
 
 
-    <div class="btn-group" role="group" aria-label="Basic mixed styles example" style="align-self: center">
-        <button type="button" class="btn btn-danger" value="PartiesInZone">@Html.ActionLink("Find the nearest parties", "PartiesInZone")</button>
-        <button type="button" class="btn btn-warning">Recommended party </button>
-        <button type="button" class="btn btn-success">Your current location</button>
-
+       <p>@Html.ActionLink("Find the nearest parties", "PartiesInZone", new { range = ViewBag.Range },  new { @class = "btn btn-primary btn-large" })</p>
     </div>
 </body>
 </html>
