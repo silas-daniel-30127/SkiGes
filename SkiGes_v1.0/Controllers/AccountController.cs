@@ -31,7 +31,7 @@ namespace SkiGes_v1._0.Controllers
                 model1.SaveChanges();
                 Session["NewUser"] = ut.nume;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 Session["NewUser"] = "fail";
             }

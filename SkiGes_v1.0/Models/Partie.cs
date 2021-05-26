@@ -18,25 +18,33 @@ namespace SkiGes_v1._0.Models
         [Key]
         public int idPartie { get; set; }
 
+        [Display(Name = "Nume")]
         [StringLength(50)]
         public string nume { get; set; }
 
+        [Display(Name = "Orar")]
         [StringLength(50)]
         public string orar { get; set; }
 
+        [Display(Name = "Link")]
         [StringLength(50)]
         public string link { get; set; }
 
+        [Display(Name = "Latitudine")]
         public double latitudine { get; set; }
 
+        [Display(Name = "Longitudine")]
         public double longitudine { get; set; }
 
+        [Display(Name = "Stare")]
         [StringLength(50)]
         public string stare_partie { get; set; }
 
+        [Display(Name = "Dificultate")]
         [StringLength(50)]
         public string dificultate { get; set; }
 
+        [Display(Name = "Strat zapada")]
         public int? strat_zapada { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

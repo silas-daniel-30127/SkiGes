@@ -19,12 +19,15 @@ namespace SkiGes_v1._0.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int idAdresa { get; set; }
 
+        [Display(Name = "Nume Oras")]
         [StringLength(50)]
         public string oras { get; set; }
 
+        [Display(Name = "Strada")]
         [StringLength(50)]
         public string strada { get; set; }
 
+        [Display(Name = "Numar")]
         public int? numar { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

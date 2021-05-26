@@ -128,7 +128,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\Tokens.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdresasController.cs" />
     <Compile Include="Controllers\FinderController.cs" />
@@ -199,7 +198,6 @@
     <Content Include="Views\Adresas\Details.cshtml" />
     <Content Include="Views\Adresas\Edit.cshtml" />
     <Content Include="Views\Adresas\Index.cshtml" />
-    <Content Include="Views\Finder\NearestParty.cshtml" />
     <Content Include="Views\Parties\Create.cshtml" />
     <Content Include="Views\Parties\Delete.cshtml" />
     <Content Include="Views\Parties\Details.cshtml" />
