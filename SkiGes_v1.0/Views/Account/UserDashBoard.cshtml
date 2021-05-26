@@ -8,21 +8,22 @@
     }
 }
 <html>
-<fieldset>
-    <div>
-        @if (Session["UserName"] != null)
-        {
-            <h1> Welcome @Session["UserName"].ToString() ! </h1>
-        }
-    </div>
-</fieldset>
-
 <body text-align="center">
-    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+    <fieldset>
+        <div>
+            @if (Session["UserName"] != null)
+            {
+                <h3> Welcome @Session["UserName"].ToString() ! </h3>
+            }
+        </div>
+    </fieldset>
+
+
+    <div class="btn-group" role="group" aria-label="Basic mixed styles example" style="align-self: center">
         <button type="button" class="btn btn-danger" value="PartiesInZone">@Html.ActionLink("Find the nearest parties", "PartiesInZone")</button>
         <button type="button" class="btn btn-warning">Recommended party </button>
         <button type="button" class="btn btn-success">Your current location</button>
-        
+
     </div>
-    </body>
+</body>
 </html>

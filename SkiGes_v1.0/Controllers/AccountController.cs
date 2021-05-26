@@ -21,8 +21,22 @@ namespace SkiGes_v1._0.Controllers
         [HttpPost]
         public ActionResult Register(Utilizator ut)
         {
+
             ut.type = "USER";
-            model1.Utilizator.Add(ut); 
+
+
+            try
+            {
+                model1.Utilizator.Add(ut);
+                model1.SaveChanges();
+                Session["NewUser"] = ut.nume;
+            }
+            catch (Exception e)
+            {
+                Session["NewUser"] = "fail";
+            }
+           
+
             return View();
         }
 
@@ -34,7 +48,6 @@ namespace SkiGes_v1._0.Controllers
                 var obj = db.Utilizator.Where(a => (a.nume.Equals(ut.nume) || a.email.Equals(ut.nume)) && a.password.Equals(ut.password)).FirstOrDefault();
                 if (obj != null)
                 {
-                    Session["UserID"] = obj.idUtilizator.ToString();
                     Session["UserName"] = obj.nume.ToString();
                     Session["UserType"] = obj.type.ToString();
                     return RedirectToAction("UserDashBoard");

@@ -6,10 +6,26 @@
 
 <h2>Register</h2>
 
-@using (Html.BeginForm()) 
+@if (Session["NewUser"] != null)
+{
+    if (Session["NewUser"].Equals("fail"))
+    {
+        <div class="alert alert-danger" role="alert">
+            "Username or email already exists !"
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-success" role="alert">
+            Welcome, @Session["NewUser"] you have registered successfully !";
+        </div>
+    }
+}
+
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>User</h4>
         <hr />
@@ -64,7 +80,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Register" class="btn btn-primary" />
             </div>
         </div>
     </div>

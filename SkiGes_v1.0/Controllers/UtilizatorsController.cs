@@ -46,13 +46,21 @@ namespace SkiGes_v1._0.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "idUtilizator,nume,prenume,email,varsta,telefon")] Utilizator utilizator)
+        public ActionResult Create([Bind(Include = "idUtilizator,nume,prenume,email,varsta,telefon,password")] Utilizator utilizator)
         {
             if (ModelState.IsValid)
             {
-                db.Utilizator.Add(utilizator);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                try
+                {
+                    db.Utilizator.Add(utilizator);
+                    db.SaveChanges();
+                    Session["NewUser"] = utilizator.nume;
+                } catch(Exception e)
+                {
+                    Session["NewUser"] = "fail";
+                }
+                
+                    return RedirectToAction("Index");
             }
 
             return View(utilizator);
