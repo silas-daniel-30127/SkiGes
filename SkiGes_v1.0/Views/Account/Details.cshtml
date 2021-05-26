@@ -5,7 +5,6 @@
 }
 
 <h2>Details</h2>
-
 <div>
     <h4>Partie</h4>
     <hr />
@@ -73,6 +72,9 @@
         <dd>
             @Html.DisplayFor(model => model.strat_zapada)
         </dd>
+
+        <button type="button" class="btn btn-success" value="SearchMotel">@Html.ActionLink("Find Motel", "SearchMotel",new {id= Model.idPartie })</button>
+
 
     </dl>
 </div>

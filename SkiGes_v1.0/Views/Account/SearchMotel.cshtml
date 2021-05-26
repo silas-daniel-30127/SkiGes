@@ -1,0 +1,71 @@
+﻿@model IEnumerable<SkiGes_v1._0.Models.Pensiune>
+@{
+    ViewBag.Title = "SearchMotel";
+    if (Session["UserType"] == null)
+    {
+        Response.Redirect("~/Account/Login");
+    }
+}
+<h1>Lista pensiunilor din apropierea partiei</h1>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Adresa.oras)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Partie.nume)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nume)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.camere)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.latitudine)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.logitudine)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Adresa.oras)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Partie.nume)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.nume)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.email)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.telefon)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.camere)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.latitudine)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.logitudine)
+    </td>
+
+</tr>
+    }
+</table>

@@ -56,12 +56,12 @@ namespace SkiGes_v1._0.Controllers
 
         public List<Partie> findAllPartiesInZone(float range)
         {
-            List<Partie> motelList = model1.Partie.ToList();
+            List<Partie> partyList = model1.Partie.ToList();
 
             Location currentLocation = getCurrentLocation();
             List<Partie> res = new List<Partie>();
         
-            foreach (Partie partie in motelList) {
+            foreach (Partie partie in partyList) {
                 if (currentLocation.distance(new Location((float)partie.latitudine, (float)partie.longitudine)) <= range)
                 {
                     res.Add(partie);
@@ -91,5 +91,22 @@ namespace SkiGes_v1._0.Controllers
             return res;
         }
 
+        public List<Pensiune> findMotels(int id)
+        {
+            List<Pensiune> motels = model1.Pensiune.ToList();
+            Partie partie = model1.Partie.Find(id);
+            Location partieLocation = new Location((float)partie.latitudine,(float)partie.longitudine);
+            List<Pensiune> hotels = new List<Pensiune>();
+            foreach(Pensiune pensiune in motels)
+            {
+                if(partieLocation.distance(new Location((float)pensiune.latitudine, (float)pensiune.logitudine)) <= 20.0)
+                {
+                    hotels.Add(pensiune);
+                }
+            }
+            
+            return hotels;
+        }
+        
     }
 }

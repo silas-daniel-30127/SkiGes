@@ -72,11 +72,16 @@ namespace SkiGes_v1._0.Controllers
             return View(partie);
         }
 
-
         public ActionResult Logout()
         {
             Session.Abandon();
             return RedirectToAction("Login");
+        }
+        public ActionResult searchMotel(int id)
+        {
+            FinderController finder = new FinderController();
+            List < Pensiune > res= finder.findMotels(id);
+            return View(res);
         }
 
         protected override void Dispose(bool disposing)
