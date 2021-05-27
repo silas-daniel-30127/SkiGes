@@ -1,0 +1,2 @@
+# SkiGes
+Industrial Informatics Project
