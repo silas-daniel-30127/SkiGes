@@ -1,12 +1,16 @@
 ﻿@model IEnumerable<SkiGes_v1._0.Models.Partie>
 @{
-    ViewBag.Title = "PartiesInZone";
+    ViewBag.Title = "searchParty";
     if (Session["UserType"] == null)
     {
         Response.Redirect("~/Account/Login");
     }
 }
-<h1>Lista partiilor apropriate</h1>
+
+<h2>Search result</h2>
+
+<h1>Lista partiilor cautate</h1>
+s
 <table class="table table-hover table-bordered">
     <tr>
         <th>
@@ -53,10 +57,9 @@
                 @Html.DisplayFor(modelItem => item.strat_zapada)
             </td>
             <td>
-                @Html.ActionLink("Details", "Details", new { id = item.idPartie }, new { @class = "btn btn-info" })
+                @Html.ActionLink("Details", "Details", new { id = item.idPartie }, new { @style = "color:#0041aa;" })
             </td>
         </tr>
     }
 
 </table>
-

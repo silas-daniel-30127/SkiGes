@@ -49,7 +49,8 @@ namespace SkiGes_v1._0.Controllers
                 var obj = db.Utilizator.Where(a => (a.nume.Equals(ut.nume) || a.email.Equals(ut.nume)) && a.password.Equals(ut.password)).FirstOrDefault();
                 if (obj != null)
                 {
-                    Session["UserName"] = obj.nume.ToString();
+                    string name = obj.nume.ToString();
+                    Session["UserName"] = name.ToUpper();
                     Session["UserType"] = obj.type.ToString();
                     return RedirectToAction("UserDashBoard");
                 }
@@ -63,13 +64,22 @@ namespace SkiGes_v1._0.Controllers
             return View();
         }
 
-            public ActionResult PartiesInZone(float range)
+        public ActionResult PartiesInZoneAction(Class1 cs)
         {
             // return View() // pagina cu search si butoane
 
             FinderController finder = new FinderController();
-            List<Partie> res = finder.findAllPartiesInZone(range);
-                return View(res);    
+            List<Partie> res = finder.findAllPartiesInZone(cs.range);
+            return View("PartiesInZone", res);
+        }
+
+        public ActionResult PartiesInZone(List<Partie> res)
+        {
+            if(res == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            return View(res);
         }
 
         // GET: Parties/Details/5
@@ -97,6 +107,19 @@ namespace SkiGes_v1._0.Controllers
             FinderController finder = new FinderController();
             List < Pensiune > res= finder.findMotels(id);
             return View(res);
+        }
+
+        public ActionResult searchPartyByName(Class1 p)
+        {
+            string s = p.searchName;
+            var query = from pt in model1.Partie where pt.nume.Contains (s) select pt;
+            List<Partie> res = new List<Partie>();
+            foreach (Partie pt in query)
+            {
+                res.Add(pt);
+            }
+
+            return View("PartiesInZone", res);
         }
 
         protected override void Dispose(bool disposing)
