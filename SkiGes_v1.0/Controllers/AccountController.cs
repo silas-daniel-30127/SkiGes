@@ -10,7 +10,6 @@ namespace SkiGes_v1._0.Controllers
 {
     public class AccountController : Controller
     {
-        private int loginIdUtilizator;
         private Model1 model1 = new Model1();
 
         // GET: Account
@@ -52,7 +51,6 @@ namespace SkiGes_v1._0.Controllers
                 {
                     string name = obj.nume.ToString();
                     Session["UserName"] = name.ToUpper();
-                    loginIdUtilizator = obj.idUtilizator;
                     Session["UserId"] = obj.idUtilizator;
                     Session["UserType"] = obj.type.ToString();
                     return RedirectToAction("UserDashBoard");
@@ -124,8 +122,6 @@ namespace SkiGes_v1._0.Controllers
 
             return View("PartiesInZone", res);
         }
-
-        [HttpPost]
         public ActionResult CreateR(int idPen, int idPar, int idUt)
         {
             try

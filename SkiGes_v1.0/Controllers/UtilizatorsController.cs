@@ -55,7 +55,7 @@ namespace SkiGes_v1._0.Controllers
                     db.Utilizator.Add(utilizator);
                     db.SaveChanges();
                     Session["NewUser"] = utilizator.nume;
-                } catch(Exception e)
+                } catch(Exception)
                 {
                     Session["NewUser"] = "fail";
                 }

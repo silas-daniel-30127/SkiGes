@@ -13,6 +13,7 @@ namespace SkiGes_v1._0.Models
         public int idRezervare { get; set; }
 
         public int? idPartie { get; set; }
+
         public int? idPensiune { get; set; }
 
         public int? idUtilizator { get; set; }

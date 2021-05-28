@@ -56,7 +56,10 @@
 
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.idUtilizator }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+@if (Session["UserType"].Equals("ADMIN") || Session["UserType"].Equals("administrator"))
+{
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.idUtilizator }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

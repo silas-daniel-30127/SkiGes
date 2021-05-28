@@ -2,6 +2,10 @@
 
 @{
     ViewBag.Title = "rezervarileMele";
+    if(Session["UserType"] == null)
+    {
+        Response.Redirect("~/Account/Login");
+    }
 }
 
 <h2>Rezervarile Mele</h2>
@@ -25,13 +29,13 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.idPartie)
+            @Html.ActionLink(item.idPartie.ToString(),"Details", "Parties", new { id = item.idPartie }, new { @class = "btn btn-info"})
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.idPensiune)
+            @Html.ActionLink(item.idPensiune.ToString(), "Details", "Pensiunes", new { id = item.idPensiune }, new { @class = "btn btn-info" })
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.idUtilizator)
+            @Html.ActionLink(item.idUtilizator.ToString(), "Details", "Utilizators", new { id = item.idUtilizator }, new { @class = "btn btn-info" })
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.numarCamere)
