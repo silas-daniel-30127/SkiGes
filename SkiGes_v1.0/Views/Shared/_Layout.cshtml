@@ -30,6 +30,8 @@
                 <ul class="nav navbar-nav">
                     @if (Session["UserType"] != null)
                     {
+                        <li>@Html.ActionLink("My Reservations", "rezervarileMele", "Account")</li>
+                        
                         if (Session["UserType"].Equals("administrator") || Session["UserType"].Equals("ADMIN"))
                         {
                             <li>@Html.ActionLink("Users", "Index", "Utilizators")</li>

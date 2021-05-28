@@ -1,0 +1,42 @@
+﻿@model IEnumerable<SkiGes_v1._0.Models.Rezervare>
+
+@{
+    ViewBag.Title = "rezervarileMele";
+}
+
+<h2>Rezervarile Mele</h2>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idPartie)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idPensiune)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idUtilizator)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numarCamere)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idPartie)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idPensiune)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idUtilizator)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numarCamere)
+        </td>
+    </tr>
+}
+
+</table>
