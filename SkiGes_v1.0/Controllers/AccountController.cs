@@ -123,6 +123,28 @@ namespace SkiGes_v1._0.Controllers
             return View("PartiesInZone", res);
         }
 
+        public ActionResult CreateR(int idPen, int idPar, int idUt)
+        {
+            try
+            {
+                Rezervare rezervare = new Rezervare();
+                rezervare.idPartie = idPar;
+                rezervare.idUtilizator = idUt;
+                rezervare.idPensiune = idPen;
+                rezervare.numarCamere = 2;
+                model1.Rezervares.Add(rezervare);
+                model1.SaveChanges();
+                Session["rezervare"] = "success";
+
+            }
+            catch (Exception)
+            {
+                Session["rezervare"] = "fail";
+            }
+            return View();
+        }
+
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

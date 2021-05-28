@@ -8,6 +8,7 @@ namespace SkiGes_v1._0.Models
     public class ViewModel
     {
         public Rezervare rezervare { get; set; }
+
         public List<Pensiune> pensiuni { get; set; }
     }
 }

@@ -221,6 +221,7 @@
     <Content Include="Views\Rezervares\Details.cshtml" />
     <Content Include="Views\Rezervares\Edit.cshtml" />
     <Content Include="Views\Rezervares\Index.cshtml" />
+    <Content Include="Views\Account\CreateR.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
