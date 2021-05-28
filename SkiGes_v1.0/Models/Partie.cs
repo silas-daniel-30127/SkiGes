@@ -18,7 +18,7 @@ namespace SkiGes_v1._0.Models
         [Key]
         public int idPartie { get; set; }
 
-        [Display(Name = "Nume")]
+        [Display(Name = "Partie")]
         [StringLength(50)]
         public string nume { get; set; }
 

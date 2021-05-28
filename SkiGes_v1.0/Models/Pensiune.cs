@@ -13,7 +13,7 @@ namespace SkiGes_v1._0.Models
         public int idPensiune { get; set; }
 
         public int? idPartie { get; set; }
-        [Display(Name = "Nume")]
+        [Display(Name = "Pensiune")]
         [StringLength(50)]
         public string nume { get; set; }
 

@@ -212,7 +212,6 @@
     <Content Include="Views\Account\Details.cshtml" />
     <Content Include="Views\Account\PartiesInZone.cshtml" />
     <Content Include="Views\Account\SearchMotel.cshtml" />
-    <Content Include="Views\Account\searchParty.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
