@@ -105,7 +105,7 @@ namespace SkiGes_v1._0.Controllers
         public ActionResult searchMotel(int id)
         {
             FinderController finder = new FinderController();
-            List < Pensiune > res= finder.findMotels(id);
+            List <Pensiune> res = finder.findMotels(id);
             return View(res);
         }
 

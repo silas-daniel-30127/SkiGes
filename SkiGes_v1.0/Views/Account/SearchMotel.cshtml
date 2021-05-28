@@ -10,7 +10,6 @@
 
 <table class="table table-hover table-bordered">
     <tr>
-        
         <th>
             @Html.DisplayNameFor(model => model.Partie.nume)
         </th>
@@ -26,18 +25,11 @@
         <th>
             @Html.DisplayNameFor(model => model.camere)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.latitudine)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.logitudine)
-        </th>
     </tr>
 
     @foreach (var item in Model)
     {
 <tr>
-   
     <td>
         @Html.DisplayFor(modelItem => item.Partie.nume)
     </td>
@@ -53,13 +45,6 @@
     <td>
         @Html.DisplayFor(modelItem => item.camere)
     </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.latitudine)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.logitudine)
-    </td>
-
 </tr>
     }
 </table>

@@ -14,14 +14,6 @@ namespace SkiGes_v1._0.Controllers
     {
         private Model1 model1 = new Model1();
         // GET: Finder
-        public ActionResult NearestParty()
-        {
-            Session["PartyName"] = findFirstParty().nume;
-            return View();
-        }
-
-
-
         private string readFromUrl(string ip)
         {
             ip = ip.Remove(ip.Length - 1); 
@@ -91,17 +83,20 @@ namespace SkiGes_v1._0.Controllers
             return res;
         }
 
-        public List<Pensiune> findMotels(int id)
+        public List<Pensiune> findMotels(int? id)
         {
             List<Pensiune> motels = model1.Pensiune.ToList();
             Partie partie = model1.Partie.Find(id);
             Location partieLocation = new Location((float)partie.latitudine,(float)partie.longitudine);
             List<Pensiune> hotels = new List<Pensiune>();
-            foreach(Pensiune pensiune in motels)
+            if (partie != null)
             {
-                if(partieLocation.distance(new Location((float)pensiune.latitudine, (float)pensiune.logitudine)) <= 20.0)
+                foreach (Pensiune pensiune in motels)
                 {
-                    hotels.Add(pensiune);
+                    if (pensiune.latitudine !=null && pensiune.logitudine != null && partieLocation.distance(new Location((float)pensiune.latitudine, (float)pensiune.logitudine)) <= 20)
+                    {
+                        hotels.Add(pensiune);
+                    }
                 }
             }
             

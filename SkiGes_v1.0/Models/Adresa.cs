@@ -19,7 +19,7 @@ namespace SkiGes_v1._0.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int idAdresa { get; set; }
 
-        [Display(Name = "Nume Oras")]
+        [Display(Name = "Oras")]
         [StringLength(50)]
         public string oras { get; set; }
 
