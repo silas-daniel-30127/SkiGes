@@ -134,17 +134,21 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PartiesController.cs" />
     <Compile Include="Controllers\PensiunesController.cs" />
+    <Compile Include="Controllers\RezervaresController.cs" />
     <Compile Include="Controllers\UtilizatorsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Adresa.cs" />
     <Compile Include="Models\Class1.cs" />
+    <Compile Include="Models\Echipamente.cs" />
     <Compile Include="Models\Location.cs" />
     <Compile Include="Models\Model1.cs" />
     <Compile Include="Models\Partie.cs" />
     <Compile Include="Models\Pensiune.cs" />
+    <Compile Include="Models\Rezervare.cs" />
     <Compile Include="Models\Utilizator.cs" />
+    <Compile Include="Models\ViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -212,6 +216,11 @@
     <Content Include="Views\Account\Details.cshtml" />
     <Content Include="Views\Account\PartiesInZone.cshtml" />
     <Content Include="Views\Account\SearchMotel.cshtml" />
+    <Content Include="Views\Rezervares\Create.cshtml" />
+    <Content Include="Views\Rezervares\Delete.cshtml" />
+    <Content Include="Views\Rezervares\Details.cshtml" />
+    <Content Include="Views\Rezervares\Edit.cshtml" />
+    <Content Include="Views\Rezervares\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

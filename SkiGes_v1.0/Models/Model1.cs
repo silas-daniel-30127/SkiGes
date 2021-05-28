@@ -16,6 +16,8 @@ namespace SkiGes_v1._0.Models
         public virtual DbSet<Partie> Partie { get; set; }
         public virtual DbSet<Pensiune> Pensiune { get; set; }
         public virtual DbSet<Utilizator> Utilizator { get; set; }
+        public virtual DbSet<Echipamente> Echipamentes { get; set; }
+        public virtual DbSet<Rezervare> Rezervares { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -73,6 +75,14 @@ namespace SkiGes_v1._0.Models
 
             modelBuilder.Entity<Utilizator>()
                 .Property(e => e.telefon)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Echipamente>()
+                .Property(e => e.descriere)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Echipamente>()
+                .Property(e => e.stoc)
                 .IsUnicode(false);
         }
     }

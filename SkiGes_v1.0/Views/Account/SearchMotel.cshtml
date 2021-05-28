@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SkiGes_v1._0.Models.Pensiune>
+﻿@model IEnumerable<SkiGes_v1._0.Models.ViewModel>
 @{
     ViewBag.Title = "SearchMotel";
     if (Session["UserType"] == null)
@@ -11,7 +11,7 @@
 <table class="table table-hover table-bordered">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Partie.nume)
+            @Html.DisplayNameFor(model => model.pensiuni.Partie.nume)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.nume)
@@ -24,6 +24,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.camere)
+        </th>
+        <th>
+            Rezervare
         </th>
     </tr>
 
@@ -45,6 +48,11 @@
     <td>
         @Html.DisplayFor(modelItem => item.camere)
     </td>
+    <td>
+        @Html.EditorFor(model=>item.numarCamere)
+        <input type="button" @Html.ActionLink("Rezerva", "~/Rezervares/Create", new {idp = item.idPartie, id = item.idPensiune,nrCamere=item.numarCamere}, new { @class = "btn btn-success btn-large" })>
+    </td>
+
 </tr>
     }
 </table>

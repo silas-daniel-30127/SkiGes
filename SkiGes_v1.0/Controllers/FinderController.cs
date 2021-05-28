@@ -85,22 +85,13 @@ namespace SkiGes_v1._0.Controllers
 
         public List<Pensiune> findMotels(int? id)
         {
-            List<Pensiune> motels = model1.Pensiune.ToList();
-            Partie partie = model1.Partie.Find(id);
-            Location partieLocation = new Location((float)partie.latitudine,(float)partie.longitudine);
-            List<Pensiune> hotels = new List<Pensiune>();
-            if (partie != null)
+            var query = from pt in model1.Pensiune where pt.idPartie==id select pt;
+            List<Pensiune> motels = new List<Pensiune>();
+            foreach(Pensiune p in query)
             {
-                foreach (Pensiune pensiune in motels)
-                {
-                    if (pensiune.latitudine !=null && pensiune.logitudine != null && partieLocation.distance(new Location((float)pensiune.latitudine, (float)pensiune.logitudine)) <= 20)
-                    {
-                        hotels.Add(pensiune);
-                    }
-                }
+                motels.Add(p);
             }
-            
-            return hotels;
+            return motels;
         }
         
     }

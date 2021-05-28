@@ -1,0 +1,42 @@
+﻿@model SkiGes_v1._0.Models.Rezervare
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Rezervare</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idPartie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idPartie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idUtilizator)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idUtilizator)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numarCamere)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numarCamere)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idRezervare }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

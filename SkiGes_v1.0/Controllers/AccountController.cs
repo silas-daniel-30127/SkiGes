@@ -51,6 +51,7 @@ namespace SkiGes_v1._0.Controllers
                 {
                     string name = obj.nume.ToString();
                     Session["UserName"] = name.ToUpper();
+                    Session["UserId"] = obj.idUtilizator;
                     Session["UserType"] = obj.type.ToString();
                     return RedirectToAction("UserDashBoard");
                 }
@@ -130,5 +131,7 @@ namespace SkiGes_v1._0.Controllers
             }
             base.Dispose(disposing);
         }
+
+        
     }
 }

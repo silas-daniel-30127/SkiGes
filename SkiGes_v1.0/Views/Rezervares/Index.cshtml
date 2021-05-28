@@ -1,0 +1,45 @@
+﻿@model IEnumerable<SkiGes_v1._0.Models.Rezervare>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idPartie)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idUtilizator)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numarCamere)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idPartie)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idUtilizator)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numarCamere)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idRezervare }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idRezervare }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idRezervare })
+        </td>
+    </tr>
+}
+
+</table>
